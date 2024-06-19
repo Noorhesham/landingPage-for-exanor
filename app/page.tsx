@@ -20,14 +20,15 @@ const cardData = [
     downDesc: "Gain competitive advantage with comprehensive market intelligence",
     img: "/chess_queen.glb",
     three: true,
+    scale:[1,1,1],position:[0,-.4,1]
   },
 ];
 
 export default function Home() {
   return (
     <main className="w-full h-full pt-32 overflow-hidden relative min-h-screen">
-      <Motion className="hidden sm:block wave right-0 -top-10 absolute w-full h-[110%]" />
-      <Motion className="hidden sm:block wave2 right-0 -top-10 absolute w-full h-[110%]" />
+      <Motion className="hidden sm:block wave right-0 top-0 absolute w-full h-[110%]" />
+      <Motion className="hidden sm:block wave2 right-0 top-0 absolute w-full h-[110%]" />
       <Motion
         initial={{ opacity: 0, scale: 0.6 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -48,7 +49,8 @@ export default function Home() {
             animation={card.animation}
             downDesc={card.downDesc}
             btn={card.btn}
-            position={[-0.5, -3, -1]}
+            position={card.position||[-0.5, -3, -1]}
+            scale={card.scale||''}
           />
         ))}
       </div>

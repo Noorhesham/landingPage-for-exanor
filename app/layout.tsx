@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(" bg-main", inter.className)}>
+      <body className={cn("  bg-gray-100", inter.className)}>
         <NavBar />
         <main className="mx-auto max-w-full ">
         {children}

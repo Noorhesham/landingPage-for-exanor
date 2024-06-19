@@ -4,7 +4,7 @@ import MaxWidthWrapper from "./MaxWidthWrapper";
 import Link from "next/link";
 import Logo from "./Logo";
 import NavItems from "./NavItems";
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import PhoneNav from "./PhoneNav";
 const PRODUCT_CATEGORIES: string[] = ["Home", "About", "Pricing", "Media", "Blog"];
 
@@ -43,16 +43,10 @@ const NavBar = () => {
               <div className="hidden flex-grow  lg:block  z-50">
                 <NavItems nav={PRODUCT_CATEGORIES} />
               </div>
-              <div className="  mr-6  lg:mr-0 ml-auto flex items-center">
-                <Link
-                  className={buttonVariants({
-                    variant: "ghost",
-                    className: "rounded-full bg-white text-gray-900 font-semibold px-5 shadow-md",
-                  })}
-                  href={"/signin"}
-                >
-                  Sign in
-                </Link>
+              <div className=" rounded-full  mr-6  lg:mr-0 ml-auto flex items-center">
+                <Button variant={'default'} className=" hover:text-gray-100 hover:bg-gray-800 rounded-full bg-white text-gray-900 font-semibold px-5 shadow-md">
+                  <Link href={"/signin"}>Sign up</Link>
+                </Button>
                 <PhoneNav navigation={PRODUCT_CATEGORIES} />
               </div>
             </div>

@@ -15,7 +15,7 @@ function Loader() {
 const Model3d = ({ className, model ,position,scale}: { className?: string; model: string, position?: [number, number, number],scale?: [number, number, number] }) => {
   return (
     <div className={className}>
-      <Canvas className="w-full   mb-20 max-h-44  ">
+      <Canvas className="w-full    max-h-44  ">
         <OrbitControls   zoomToCursor={false} maxZoom={1} minZoom={1} enableZoom={false} />
         <Suspense fallback={<Loader />}>
           <directionalLight intensity={0.5} />

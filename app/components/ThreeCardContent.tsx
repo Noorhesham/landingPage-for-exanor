@@ -19,7 +19,8 @@ const cardVariants = {
     x: 0,
     transition: {
       duration: 1,
-      type: "spring",delay: 0.5
+      type: "spring",
+      delay: 0.5,
     },
   },
 };
@@ -45,12 +46,7 @@ export function ThreeDCardDemo({
   downDesc?: string;
 }) {
   return (
-    <motion.div
-    custom={1}
-    initial="hidden"
-    animate="visible"
-    variants={cardVariants}
-  >
+    <motion.div custom={1} initial="hidden" animate="visible" variants={cardVariants}>
       <CardContainer className="inter-var">
         <CardBody className="bg-[#fffdfe] rounded-[2rem] shadow-sm relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black w-full max-w-[20rem] sm:w-[25rem] h-auto p-6">
           <CardItem translateZ="50" className="text-xl text-center mx-auto font-bold text-[#25333e] dark:text-white">

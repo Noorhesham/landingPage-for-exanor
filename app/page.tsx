@@ -17,7 +17,7 @@ const cardData = [
   },
   {
     text: "Market Intelligence",
-    desc: "Gain competitive advantage with comprehensive market intelligence",
+    downDesc: "Gain competitive advantage with comprehensive market intelligence",
     img: "/chess_queen.glb",
     three: true,
   },
@@ -46,6 +46,7 @@ export default function Home() {
             img={card.img}
             three={card.three}
             animation={card.animation}
+            downDesc={card.downDesc}
             btn={card.btn}
             position={[-0.5, -3, -1]}
           />
